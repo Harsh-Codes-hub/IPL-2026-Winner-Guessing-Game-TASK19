@@ -3,12 +3,8 @@
   --bg: oklch(0.15 0.005 20);
   --bg-light: oklch(0.2 0.005 20);
   --text: oklch(0.96 0.01 20);
-  --primary: oklch(0.4 0.2 20);
-  --secondary: oklch(0.4 0.2 200);
   --danger: oklch(0.5 0.2 30);
-  --warning: oklch(0.5 0.2 100);
   --success: oklch(0.5 0.2 160);
-  --info: oklch(0.5 0.2 260);
 }
 
 * {
@@ -32,12 +28,12 @@ button {
 
 body {
   background-color: var(--bg);
-  color: white;
 }
 
 main {
   position: relative;
   height: 100vh;
+  background-color: var(--bg);
 
   .container {
     background-color: var(--bg-light);
@@ -60,6 +56,10 @@ main {
       justify-content: space-between;
       align-items: center;
       text-align: center;
+      gap: 15px;
+      background-color: var(--bg-dark);
+      padding: 10px 0;
+      border-radius: 10px;
     }
 
     .button-group {
@@ -75,14 +75,20 @@ main {
   .top {
     width: 100%;
 
+    h1,
+    h4 {
+      color: var(--text);
+      -webkit-text-stroke: 1px var(--text);
+    }
+
     h1 {
       font-size: 75px;
       margin-block: 10px;
     }
 
     h4 {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 25px;
+      font-weight: 800;
     }
   }
 
@@ -91,15 +97,16 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--text);
 
     #caption {
       font-style: italic;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     #trophies {
       font-weight: 500;
-      font-weight: 20px;
+      font-size: 20px;
     }
   }
 }
@@ -109,20 +116,17 @@ main {
   border-radius: 10px;
   width: fit-content;
   font-size: 20px;
-  background-color: var(--bg-dark);
   font-weight: 700;
   border: 2px solid;
+  background-color: var(--bg-light);
 }
 
-#Guess {
+#guess {
   color: var(--success);
   &:active {
     background-color: var(--success);
     color: var(--bg-dark);
     border-color: var(--bg-dark);
-  }
-  &:hover {
-    mix-blend-mode: difference;
   }
 }
 
@@ -132,8 +136,5 @@ main {
     background-color: var(--danger);
     color: var(--bg-dark);
     border-color: var(--bg-dark);
-  }
-  &:hover {
-    mix-blend-mode: difference;
   }
 }
