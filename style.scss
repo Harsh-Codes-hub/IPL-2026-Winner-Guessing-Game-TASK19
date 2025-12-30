@@ -78,7 +78,8 @@ main {
     h1,
     h4 {
       color: var(--text);
-      -webkit-text-stroke: 1px var(--text);
+      -webkit-text-stroke: 1px oklab(100% 0 -0.00011 / 0.377);
+      letter-spacing: 2px;
     }
 
     h1 {

@@ -73,7 +73,8 @@ main .container .button-group {
 .window .top h1,
 .window .top h4 {
   color: var(--text);
-  -webkit-text-stroke: 1px var(--text);
+  -webkit-text-stroke: 1px oklab(100% 0 -0.00011 / 0.377);
+  letter-spacing: 2px;
 }
 .window .top h1 {
   font-size: 75px;
